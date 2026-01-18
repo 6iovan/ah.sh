@@ -1,7 +1,8 @@
 use std::{os::unix::process::CommandExt, process::Command};
 
-const FLAKE_URL: &str = "github:6iovan/ah.sh#ah";
+const FLAKE_URL: &str = "github:0x7a696f6e/ah.sh#ah";
 
+#[allow(unused_must_use)]
 pub fn exec_nix_develop(env_ahsh_languages: String, env_ahsh_packages: String) {
     Command::new("nix")
         .args(["develop", "--no-pure-eval", FLAKE_URL])
